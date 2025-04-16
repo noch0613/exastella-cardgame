@@ -3,26 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>カードゲーム</title>
+  <title>Exastella Card Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>カードゲーム</h1>
+    <h1>Exastella Card Game</h1>
   </header>
   <main id="game">
-    <section id="player">
-      <h2>あなた</h2>
-      <div id="player-cards"></div>
-      <button id="play-card">カードを出す</button>
-    </section>
+    <!-- CPUプレイヤーエリア -->
     <section id="cpu">
       <h2>CPU</h2>
-      <div id="cpu-cards"></div>
+      <div id="cpu-cards" class="card-grid"></div>
     </section>
-    <section id="log">
-      <h2>ログ</h2>
-      <div id="log-messages"></div>
+
+    <!-- 自分のプレイヤーエリア -->
+    <section id="player">
+      <h2>あなた</h2>
+      <div id="player-cards" class="card-grid"></div>
+      <button id="play-card">カードを出す</button>
     </section>
   </main>
   <script src="script.js"></script>
