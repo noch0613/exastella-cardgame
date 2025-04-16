@@ -1,1 +1,60 @@
+/* ベーススタイル */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
+/* ヘッダー */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+/* メインゲームレイアウト */
+#game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* 各セクション */
+#player, #cpu, #log {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+}
+
+#player-cards, #cpu-cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.card {
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px;
+  width: 100px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#log-messages {
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+}
