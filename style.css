@@ -22,8 +22,9 @@ header {
   margin-top: 20px;
 }
 
-/* 各セクション */
-#player, #cpu, #log {
+/* CPUエリアを上部に配置 */
+#cpu {
+  order: 1; /* 上部に配置 */
   margin: 20px;
   padding: 10px;
   border: 1px solid #ccc;
@@ -33,9 +34,23 @@ header {
   background-color: #fff;
 }
 
-#player-cards, #cpu-cards {
-  display: flex;
-  justify-content: center;
+/* プレイヤーエリアを下部に配置 */
+#player {
+  order: 2; /* 下部に配置 */
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+}
+
+/* カードの配置を3列×2段にする */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3列 */
+  gap: 10px;
   margin-top: 10px;
 }
 
@@ -43,7 +58,6 @@ header {
   border: 1px solid #333;
   border-radius: 8px;
   padding: 10px;
-  margin: 5px;
   width: 100px;
   height: 150px;
   display: flex;
@@ -51,10 +65,4 @@ header {
   align-items: center;
   background-color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#log-messages {
-  text-align: left;
-  max-height: 200px;
-  overflow-y: auto;
 }
